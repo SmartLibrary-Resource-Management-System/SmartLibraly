@@ -196,3 +196,53 @@ bool FileManager::loadMembers(std::vector<AbstractMember*>& members, const std::
     std::cout << "[Success] Nạp thành viên từ " << filename << " thành công." << std::endl;
     return true;
 }
+
+bool FileManager::exportInventoryReport(const std::vector<AbstractLibraryResource*>& resources, 
+                                        const std::vector<AbstractMember*>& members, 
+                                        const std::string& filename) {
+    std::ofstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "[Error] Khong the tao file bao cao: " << filename << std::endl;
+        return false;
+    }
+
+    file << "==================================================\n";
+    file << "         BAO CAO THONG KE KHO THU VIEN            \n";
+    file << "==================================================\n\n";
+
+    file << "[1] THONG KE TAI NGUYEN TRONG HE THONG\n";
+    file << "--------------------------------------------------\n";
+    file << "Tong so tai nguyen: " << resources.size() << "\n\n";
+
+    for (const auto* res : resources) {
+        if (!res) continue;
+        file << "- ID: " << res->getResourceId() 
+             << " | Ten: " << res->getTitle() 
+             << " | Loai: " << res->getResourceType() << "\n";
+    }
+    file << "\n";
+
+    file << "[2] DANH SACH THANH VIEN DANG MUON SACH\n";
+    file << "--------------------------------------------------\n";
+    
+    int countBorrowing = 0;
+    for (const auto* m : members) {
+        if (!m) continue;
+        if (m->getBorrowedCount() > 0) { 
+            countBorrowing++;
+            file << "- Thanh vien: " << m->getFullName() 
+                 << " (ID: " << m->getMemberId() << ")"
+                 << " | So sach dang muyen: " << m->getBorrowedCount() << "\n";
+        }
+    }
+
+    if (countBorrowing == 0) {
+        file << "Hien tai khong co thanh vien nao dang muyen sach.\n";
+    }
+
+    file << "\n==================================================\n";
+    file.close();
+
+    std::cout << "[Success] Da xuat bao cao ra file " << filename << std::endl;
+    return true;
+}

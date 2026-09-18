@@ -17,6 +17,9 @@ public:
 
     static bool saveMembers(const std::vector<AbstractMember*>& members, const std::string& filename);
     static bool loadMembers(std::vector<AbstractMember*>& members, const std::string& filename);
+    static bool exportInventoryReport(const std::vector<AbstractLibraryResource*>& resources, 
+                                  const std::vector<AbstractMember*>& members, 
+                                  const std::string& filename = "inventory_report.txt");
 };
 
 #endif 
