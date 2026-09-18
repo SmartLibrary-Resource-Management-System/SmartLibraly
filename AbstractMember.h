@@ -69,6 +69,8 @@ public:
     FacultyMember(std::string id, std::string name, std::string mail, std::string phone, 
                   std::string eId, std::string dept, std::string title)
         : AbstractMember(id, name, mail, phone), employeeId(eId), department(dept), academicTitle(title) {}
+    
+    virtual ~FacultyMember() override = default;
 
     double calculateFine(int overdueDays) const override {
         return 0.0; 

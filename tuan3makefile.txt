@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.16)
+project(SmartLibrarySystem LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Include directories
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+# Executable target (example with main.cpp)
+file(GLOB_RECURSE SOURCES "src/*.cpp")
+file(GLOB_RECURSE HEADERS "include/*.h")
+
+# If testing or compiling as executable
+add_executable(SmartLibrarySystem main.cpp ${SOURCES} ${HEADERS})
