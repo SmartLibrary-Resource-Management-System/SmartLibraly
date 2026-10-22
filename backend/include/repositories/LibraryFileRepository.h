@@ -10,10 +10,10 @@ public:
     explicit LibraryFileRepository(std::filesystem::path dataDirectory) : dir_(std::move(dataDirectory)) {}
 
     void save(const Library& library) const;
-    void load(Library& library) const;  // throws PersistenceException
+    void load(Library& library) const;  
     bool hasData() const;
     const std::filesystem::path& directory() const { return dir_; }
-    static const char* const* fileNames();  // NULL-terminated list
+    static const char* const* fileNames();  
 
 private:
     std::filesystem::path dir_;
