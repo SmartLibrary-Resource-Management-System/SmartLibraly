@@ -72,7 +72,7 @@ double toDouble(const std::string& text) {
 void need(const std::vector<std::string>& f, size_t count) {
     if (f.size() < count) throw PersistenceException("expected at least " + std::to_string(count) + " fields");
 }
-}  // namespace
+}  
 
 const char* const* LibraryFileRepository::fileNames() { return kFiles; }
 
