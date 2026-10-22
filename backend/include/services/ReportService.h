@@ -16,8 +16,8 @@ struct InventoryStats {
     int totalLoans = 0, activeLoans = 0, overdueLoans = 0, returnedLoans = 0;
     int totalReservations = 0, waitingReservations = 0, readyReservations = 0;
     double outstandingFines = 0.0, collectedFines = 0.0;
-    std::array<int, 3> overdueBuckets{{0, 0, 0}};                  // 1-7, 8-14, 15+ days
-    std::vector<std::pair<std::string, int>> borrowingTrend;       // loans per day, last 14 days
+    std::array<int, 3> overdueBuckets{{0, 0, 0}};                  
+    std::vector<std::pair<std::string, int>> borrowingTrend;       
 };
 
 struct ExportedReport {
@@ -33,8 +33,8 @@ public:
     InventoryStats computeStats(const std::string& asOfDate = "");
     std::string buildInventoryReport(const std::string& asOfDate = "");
     std::string buildInventoryCsv(const std::string& asOfDate = "");
-    ExportedReport exportInventoryReport(const std::string& asOfDate = "");  // reports/inventory_report.txt
-    ExportedReport exportInventoryCsv(const std::string& asOfDate = "");     // reports/inventory_report.csv
+    ExportedReport exportInventoryReport(const std::string& asOfDate = "");
+    ExportedReport exportInventoryCsv(const std::string& asOfDate = "");
     const std::string& reportsDir() const { return reportsDir_; }
 
 private:
