@@ -15,7 +15,7 @@ std::string csvCell(const std::string& value) {
     for (char c : value) out += (c == '"') ? std::string("\"\"") : std::string(1, c);
     return out + "\"";
 }
-}  // namespace
+}  
 
 InventoryStats ReportService::computeStats(const std::string& asOfDate) {
     const std::string today = asOfDate.empty() ? DateUtils::today() : asOfDate;
