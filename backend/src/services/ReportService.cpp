@@ -43,7 +43,7 @@ InventoryStats ReportService::computeStats(const std::string& asOfDate) {
         }
     }
 
-    const std::vector<Loan> loans = loans_.getAllLoans(today);  // also refreshes OVERDUE flags
+    const std::vector<Loan> loans = loans_.getAllLoans(today);
     s.totalLoans = static_cast<int>(loans.size());
     for (const Loan& loan : loans) {
         if (loan.isReturned()) { ++s.returnedLoans; continue; }
