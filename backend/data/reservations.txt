@@ -1,0 +1,6 @@
+# id|memberId|resourceId|date|status (WAITING rows form the queues, in id order)
+1|3|1|2026-10-20|WAITING
+2|4|1|2026-10-21|WAITING
+3|1|4|2026-10-21|WAITING
+4|8|4|2026-10-22|WAITING
+5|4|12|2026-10-18|READY

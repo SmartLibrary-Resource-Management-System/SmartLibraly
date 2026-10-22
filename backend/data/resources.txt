@@ -1,0 +1,14 @@
+# type|id|title|author|isbn|genre|year|total|available|key=value...
+BOOK|1|Clean Code|Robert C. Martin|978-0-13-235088-4|Software Engineering|2008|2|0|publisher=Prentice Hall|pageCount=464|edition=1st
+BOOK|2|The C++ Programming Language|Bjarne Stroustrup|978-0-321-56384-2|Programming|2013|3|2|publisher=Addison-Wesley|pageCount=1376|edition=4th
+BOOK|3|Effective Modern C++|Scott Meyers|978-1-4919-0399-5|Programming|2014|2|1|publisher=O'Reilly|pageCount=334|edition=1st
+BOOK|4|Design Patterns|Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides|978-0-201-63361-0|Software Engineering|1994|1|0|publisher=Addison-Wesley|pageCount=395|edition=1st
+BOOK|5|Introduction to Algorithms|Thomas H. Cormen et al.|978-0-262-03384-8|Computer Science|2009|2|1|publisher=MIT Press|pageCount=1292|edition=3rd
+BOOK|6|Harry Potter and the Philosopher's Stone|J.K. Rowling|978-0-7475-3269-9|Fantasy|1997|2|2|publisher=Bloomsbury|pageCount=223|edition=1st
+BOOK|7|The Pragmatic Programmer|Andrew Hunt, David Thomas|978-0-13-595705-9|Software Engineering|2019|2|2|publisher=Addison-Wesley|pageCount=352|edition=2nd
+EBOOK|8|A Tour of C++|Bjarne Stroustrup|978-0-13-499783-4|Programming|2022|5|4|fileFormat=EPUB|fileSizeMB=4.2|fileReference=https://library.example.edu/ebooks/tour-of-cpp|licenseType=Perpetual
+EBOOK|9|Artificial Intelligence: A Modern Approach|Stuart Russell, Peter Norvig|978-0-13-461099-3|Artificial Intelligence|2020|3|2|fileFormat=PDF|fileSizeMB=38.5|fileReference=https://library.example.edu/ebooks/aima|licenseType=Subscription
+EBOOK|10|Database System Concepts|Abraham Silberschatz et al.|978-0-07-802215-9|Databases|2019|4|4|fileFormat=PDF|fileSizeMB=25|fileReference=https://library.example.edu/ebooks/dsc|licenseType=Perpetual
+JOURNAL|11|Journal of Systems and Software|Elsevier||Software Engineering|2024|2|1|volume=210|issue=1|issn=0164-1212|academicField=Software Engineering
+JOURNAL|12|Communications of the ACM|ACM||Computer Science|2024|1|1|volume=67|issue=10|issn=0001-0782|academicField=Computer Science
+JOURNAL|13|Nature|Springer Nature||Science|2024|2|2|volume=630|issue=8015|issn=0028-0836|academicField=Multidisciplinary Science

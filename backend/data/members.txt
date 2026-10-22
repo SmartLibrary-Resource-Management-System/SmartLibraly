@@ -1,0 +1,9 @@
+# type|id|fullName|email|phone|status|registrationDate
+STUDENT|1|Nguyễn Văn A|nguyen.van.a@student.example.edu|+84 90 000 0001|ACTIVE|2025-09-17
+STUDENT|2|Trần Văn B|tran.van.b@student.example.edu|+84 90 000 0002|ACTIVE|2025-10-07
+STUDENT|3|Lê Văn C|le.van.c@student.example.edu|+84 90 000 0003|ACTIVE|2025-12-26
+STUDENT|4|Phạm Thị D|pham.thi.d@student.example.edu|+84 90 000 0004|ACTIVE|2026-02-14
+STUDENT|5|Hoàng Minh E|hoang.minh.e@student.example.edu|+84 90 000 0005|SUSPENDED|2026-04-05
+STUDENT|6|Vũ Thị F|vu.thi.f@student.example.edu|+84 90 000 0006|INACTIVE|2025-03-01
+FACULTY|7|Dr. Lê Quang Huy|huy.le@faculty.example.edu|+84 91 000 0001|ACTIVE|2024-05-05
+FACULTY|8|Prof. Đặng Thu Hà|ha.dang@faculty.example.edu|+84 91 000 0002|ACTIVE|2023-07-10

@@ -1,0 +1,8 @@
+# key=value
+libraryName=Smart Library (Demo)
+demoData=1
+nextResourceId=14
+nextMemberId=9
+nextLoanId=15
+nextReservationId=6
+savedAt=2026-10-22 16:12:13
