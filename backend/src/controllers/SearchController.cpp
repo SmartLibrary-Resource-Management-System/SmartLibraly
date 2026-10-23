@@ -17,7 +17,7 @@ void SearchController::registerRoutes(Router& router) {
             if (available == "true") criteria.availableOnly = true;
             else if (available == "false") criteria.availableOnly = false;
 
-            const auto results = app_.search.search(criteria);  // throws "Search query cannot be empty."
+            const auto results = app_.search.search(criteria);  
             Json list = Json::array();
             for (const LibraryResource* r : results) list.push(mapper_.resource(*r));
             Json data = Json::object();
