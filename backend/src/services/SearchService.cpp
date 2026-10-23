@@ -11,7 +11,6 @@ namespace {
 using Ptr = const LibraryResource*;
 using Results = std::vector<Ptr>;
 
-// Predicate object: "does <field of resource> contain <needle>?" (case-insensitive)
 class FieldContains {
 public:
     FieldContains(std::string needle, std::function<std::string(const LibraryResource&)> field)
@@ -40,7 +39,7 @@ Results keep(const Results& input, const std::function<bool(Ptr)>& predicate) {
     std::copy_if(input.begin(), input.end(), std::back_inserter(output), predicate);
     return output;
 }
-}  // namespace
+}  
 
 bool SearchCriteria::hasTextCriteria() const {
     return !StringUtils::trim(query).empty() || !StringUtils::trim(title).empty() || !StringUtils::trim(author).empty() ||
