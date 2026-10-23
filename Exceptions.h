@@ -2,8 +2,6 @@
 #include <stdexcept>
 #include <string>
 
-// Every business-rule failure is a LibraryException carrying the HTTP status
-// the API layer should answer with. Domain code never knows about HTTP itself.
 class LibraryException : public std::runtime_error {
 public:
     LibraryException(const std::string& message, int httpStatus)
