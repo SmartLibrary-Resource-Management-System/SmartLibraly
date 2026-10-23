@@ -59,7 +59,7 @@ LibraryResource& ResourceService::update(int id, const FieldMap& changes) {
 
     for (auto& slot : library_.resources())
         if (slot->getId() == id) slot = std::move(replacement);
-    reservations_.fulfillQueue(id);  // extra copies may satisfy waiting members
+    reservations_.fulfillQueue(id);  
     library_.notifyChanged();
     return *library_.findResource(id);
 }
