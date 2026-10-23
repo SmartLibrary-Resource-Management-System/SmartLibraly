@@ -6,7 +6,6 @@
 class Loan {
 public:
     Loan(int loanId, int memberId, int resourceId, std::string borrowDate, std::string dueDate);
-    // full constructor used when loading saved state
     Loan(int loanId, int memberId, int resourceId, std::string borrowDate, std::string dueDate,
          std::string returnDate, LoanStatus status, double fineAmount, bool finePaid);
 
