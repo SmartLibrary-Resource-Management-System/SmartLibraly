@@ -11,14 +11,12 @@
 #include "models/Member.h"
 #include "models/Reservation.h"
 
-// Aggregate root (COMPOSITION): the Library owns its resources, members, loans
-// and reservations. It only stores and looks things up; business rules live in
-// the services, which keeps this class small and each service testable.
+
 class Library {
 public:
     using ResourceList = std::vector<std::unique_ptr<LibraryResource>>;
     using MemberList = std::vector<std::unique_ptr<Member>>;
-    // resourceId -> FIFO queue of WAITING reservations
+
     using WaitingQueues = std::map<int, std::queue<Reservation>>;
 
     struct IdCounters { int resource = 1, member = 1, loan = 1, reservation = 1; };
@@ -54,8 +52,6 @@ public:
     void clear();
     void adopt(Library&& other);  // replace all data, keep the change listener
 
-    // Observer hook: services call notifyChanged() after every successful mutation;
-    // the application wires it to PersistenceService::save().
     void setChangeListener(std::function<void()> listener) { listener_ = std::move(listener); }
     void muteNotifications(bool muted) { muted_ = muted; }
     void notifyChanged() const { if (listener_ && !muted_) listener_(); }
